@@ -1,0 +1,367 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: 'Source Sans Pro', 'Arial', sans-serif;}
+html, body{margin: 0; padding: 0;}
+header, section, article, aside, nav, main, footer{display: block;} 
+header:after, section:after, article:after, aside:after, nav:after, main:after, footer:after{display: block; clear: both; content: "";} /*display: flex; 선언을 했다면 사용하지 말 것!*/
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+.clear{clear: both;}
+.impact{font-family: 'Pacifico', cursive;}
+
+.map{font-size: 24px; color: #ff0000;}
+.map:hover{color: #0000ff;}
+
+
+.img_box{width: 200px; height: 160px; background-image: url(../img/menu_1.jpg); background-size: cover; background-position: 50% 50%;}
+
+
+
+
+/* 실습1 */
+
+#header{background-color: #ddd;}
+#header .top{height: 30px; background-color: #000;}
+#header .top .wrap{width: 1160px; height: 100%; padding: 0 10px; margin: 0 auto; /*background-color: #ccc;*/}
+#header .top .wrap .info{float: left;}
+#header .top .wrap .info ul{}
+#header .top .wrap .info ul li{float: left; color: #fff; line-height: 30px; margin-left: 10px; font-size: 14px;}
+/* i태그 건들지 말것! */
+
+
+#header .top .wrap .sns{float: right;}
+#header .top .wrap .sns ul{}
+#header .top .wrap .sns ul li{float: left; margin: 0 10px;}
+#header .top .wrap .sns ul li a{display: block; line-height: 30px; color: #fff; font-size: 14px;}
+
+#header .top .wrap .sns ul li:hover a{color: #ff6600;}
+
+#header .main{background-image: url(../img/1.jpg); background-size: cover; background-position: 50% 50%; background-attachment: fixed;}
+
+#header .main .dark{background-color: rgba(0, 0, 0, .5);}
+
+#header .main .dark .wrap{width: 1160px; height: 66px; padding: 0 10px; margin: 0 auto;}
+/* (66-32(로고의 세로크기, 검사창에서 확인))/2 */
+
+#header .main .dark .wrap .logo{float: left; padding: 17px 0;}
+#header .main .dark .wrap .logo a{display: block;}
+#header .main .dark .wrap .logo a img{display: block;}
+
+#header .main .dark .wrap .menu{float: right;}
+#header .main .dark .wrap .menu ul{float: left;}
+#header .main .dark .wrap .menu ul li{float: left;} /*float, display 각각 독립적인 공간 또는 객체! 본인만 가지고 있는 특성! 개별적용! ★상속없음★*/
+/* float는 상속이 안된다! 일자로 배치하기 위하여 li에 한번 더 선언 */
+#header .main .dark .wrap .menu ul li a{display: block; padding: 0 20px; color: #fff; line-height: 66px; font-weight: bold; transition: background-color 0.5s, color 0.5s;}
+
+#header .main .dark .wrap .menu ul li:hover a{background-color: rgba(255, 255, 255, .6); color: #ff6600;}
+
+
+
+#header .main .dark .wrap .menu .reserve_btn{float: left; width: 180px; text-align: right; padding: 12px 0;}
+/* (66-42)/2 */
+
+#header .main .dark .wrap .menu .reserve_btn a{display: inline-block; color: #fff; font-size: 16px; padding: 10px 14px; border: 1px solid #ff6600; border-radius: 4px; background-color: #ff6600; font-weight: bold; transition: background-color 0.5s, color 0.5s;}
+
+#header .main .dark .wrap .menu .reserve_btn a:hover{background-color: #fff; color: #ff6600;}
+
+
+/* 실습2 */
+
+#header .main .dark .main_title{width: 1160px; padding: 0 10px; height: 494px; margin: 0 auto; /*display: table;*/ position: relative;}
+
+#header .main .dark .main_title .txt_center{/*display: table-cell; text-align: center; vertical-align: middle;*/ position: absolute; left:50%; top:50%; width: 100%; transform:translate(-50%, -50%); text-align: center;}
+
+#header .main .dark .main_title .txt_center h1{font-size: 54px; line-height: 72px; color:#fff;}
+#header .main .dark .main_title .txt_center p{font-size: 16px; color:#fff; padding: 16px 0 40px;}
+#header .main .dark .main_title .txt_center ul{font-size: 0;}
+#header .main .dark .main_title .txt_center ul li{display: inline-block; margin: 0 10px;}
+#header .main .dark .main_title .txt_center ul li a{display: block; width: 202px; height: 44px; border:1px solid #ff6600; line-height: 42px; color:#fff; text-transform: capitalize; border-radius:8px; font-size: 16px; transition:background-color 0.5s, color 0.5s;}
+#header .main .dark .main_title .txt_center ul li:hover a{background-color: rgba(255,255,255,0.4); color:#ff6600;}
+
+
+
+/* 실습3 */
+#contents_01{width: 100%;}
+#contents_01 .wrap{width: 1160px; padding: 0 10px; height: 600px; margin: 0 auto; text-align: center; overflow: hidden;}
+
+#contents_01 .wrap .title{padding-top: 60px; padding-bottom: 40px;}
+/* 초반에는 margin을 안쓰는게 좋다! */
+#contents_01 .wrap .title h1{font-size: 54px; line-height: 72px; color: #555;}
+#contents_01 .wrap .title h1 span{color: #ff6600;}
+#contents_01 .wrap .title p{font-size: 16px; color: #555; padding-top: 20px;}
+
+#contents_01 .wrap .center{width: 100%; height: 200px; font-size: 0; vertical-align: top;}
+#contents_01 .wrap .center ul{font-size: 0; text-align: center;}
+#contents_01 .wrap .center ul li{width: 540px; height: 200px; margin: 0 15px; display: inline-block;}
+
+#contents_01 .wrap .center ul li:nth-child(1){background-image: url(../img/cook-01.jpg); background-position: 50% 80%; background-size: 120%; border-radius: 8px;}
+#contents_01 .wrap .center ul li:nth-child(2){padding-top: 40px;}
+#contents_01 .wrap .center ul li > p{font-size: 16px; width: 540px; padding-bottom: 40px;}
+#contents_01 .wrap .center ul li > p > img{display: block;}
+
+
+#contents_01 .wrap .bottom{padding-top: 100px;}
+#contents_01 .wrap .bottom img{display: block; width: 100%;}
+
+
+.mid_01{text-align: center;}
+.mid_01 .outer{display: inline-block; width: 400px; height: 400px; padding: 50px; background-image: url(../img/cook-01.jpg); background-size: cover; background-position: 50% 50%;}
+.mid_01 .outer .inner{width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); padding: 50px; /*display: none; transition: display 1s;*/ opacity: 0; transition: opacity 1s;}
+
+.mid_01 .outer:hover .inner{/*display: block;*/}
+/* display: none; 본인 공간도 제거 -> 마우스 오버 가능 공간이 아님*/
+/* display 선언은 시간차(transition) 적용 가능한 선언이 아님 (z-index도 동일) */
+.mid_01 .outer .inner:hover{opacity: 1;}
+/* opacitiy: 0; 본인 공간이 존재 -> 마우스 오버 가능 공간 */
+
+.mid_01 .outer .inner .cont{width: 100%; height: 100%; text-align: left;}
+.mid_01 .outer .inner .cont h3{font-size: 36px; color: #ffff00; padding-bottom: 20px;}
+.mid_01 .outer .inner .cont p{font-size: 18px; color: #fff;}
+.mid_01 .outer .inner .cont p a{font-size: 18px; color: #ffff00; float: right; transition: color 0.5s;}
+
+.mid_01 .outer .inner .cont p a:hover{color: #ff0000;}
+
+
+/* 실습4 */
+#content_02{width: 100%; height: 1150px; background-color: #ededed;}
+#content_02 .top{width: 100%; height: 460px; background-image: url(../img/2.jpg); background-size: cover; background-attachment: fixed;}
+#content_02 .top .dark{width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);}
+
+
+
+#content_02 .cont{margin-top: -360px;}
+#content_02 .cont .text{text-align: center; color: #fff; text-transform: capitalize;}
+#content_02 .cont .text h2{font-size: 54px; line-height: 72px; padding: 20px 0;}
+#content_02 .cont .text p{font-size: 16px; padding-bottom: 40px}
+
+#content_02 .cont .img{width: 1160px; height: auto; padding: 0 10px; margin: 0 auto; text-align: center;}
+#content_02 .cont .img .outer{width: 360px; height: 360px; margin: 0 10px; border-radius: 8px; float: left;}
+
+#content_02 .cont .img .outer:nth-child(1){background-image: url(../img/menu_1.jpg); width: 740px; margin-bottom: 20px;}
+#content_02 .cont .img .outer:nth-child(2){background-image: url(../img/menu_2.jpg); margin-bottom: 20px;}
+#content_02 .cont .img .outer:nth-child(3){background-image: url(../img/menu_3.jpg);}
+#content_02 .cont .img .outer:nth-child(4){background-image: url(../img/menu_4.jpg);}
+#content_02 .cont .img .outer:nth-child(5){background-image: url(../img/menu_5.jpg);}
+
+
+
+#content_02 .cont .img .outer .inner{position: relative; width: calc(100% - 40px); height: calc(100% - 40px); margin: 20px; border-radius: 8px; background-color: rgba(0, 0, 0, 0.5); opacity: 0; transition: opacity 1s;}
+#content_02 .cont .img .outer .inner .text{text-align: left;padding: 20px;}
+#content_02 .cont .img .outer .inner .text h3{font-size: 28px; font-weight: bold;}
+#content_02 .cont .img .outer .inner .text p{font-size: 18px;}
+#content_02 .cont .img .outer .inner .text span{font-size: 28px; color: #ff6600; font-weight: bold; position: absolute; right: 20px; bottom: 20px;}
+
+#content_02 .cont .img .outer .inner:hover{opacity: 1;}
+
+
+#content_02 .cont .img .bottom_img{display: block; padding-top: 60px}
+#content_02 .cont .img .bottom_img img{display: block; padding: 0 546px; padding-top: 60px;}
+
+
+
+
+/* 4 - 쌤 */
+/* #special{background-color: #ededed;}
+#special .top{width: 100%; height: 460px; background-image: url(../img/2.jpg); background-size: cover; background-position: 50% 50%; background-attachment: fixed;}
+#special .top .dark{width: 100%; height: 100%; background-color: rgba(0,0,0,0.4);}
+
+#special .bottom{}
+#special .bottom .wrap{width: 1160px; height: auto; padding: 0 10px; margin: 0 auto; background: #ccc;}
+#special .bottom .wrap .title{text-align: center; padding-bottom: 40px;}
+#special .bottom .wrap .title h2{font-size: 54px; line-height: 72px; color:#fff; padding: 20px 0; text-transform: capitalize;}
+#special .bottom .wrap .title p{font-size: 16px; color:#fff; text-transform: uppercase;}
+
+#special .bottom .wrap .cont{font-size: 0;}
+#special .bottom .wrap .cont .outer{display: inline-block; width: 360px; height: 360px; margin-right: 30px; margin-bottom: 30px; background-color: #ffff99; border-radius: 8px; background-size: cover; background-position: 50% 50%; padding: 20px; vertical-align: top;}
+#special .bottom .wrap .cont .outer:nth-child(1){background-image: url(../img/menu_1.jpg); width: 750px;}
+#special .bottom .wrap .cont .outer:nth-child(2){background-image: url(../img/menu_2.jpg); margin: 0;}
+#special .bottom .wrap .cont .outer:nth-child(3){background-image: url(../img/menu_3.jpg);}
+#special .bottom .wrap .cont .outer:nth-child(4){background-image: url(../img/menu_4.jpg);}
+#special .bottom .wrap .cont .outer:nth-child(5){background-image: url(../img/menu_5.jpg); margin: 0;}
+
+#special .bottom .wrap .cont .outer .inner{width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); padding: 20px; border-radius:8px; position: relative; opacity:0; transition:opacity 0.5s;}
+#special .bottom .wrap .cont .outer:hover .inner{opacity:1;}
+
+#special .bottom .wrap .cont .outer .inner h3{font-size: 28px; color:#fff; text-transform: capitalize;}
+#special .bottom .wrap .cont .outer .inner p{font-size: 18px; color:#fff;}
+#special .bottom .wrap .cont .outer .inner .price{font-size: 28px; color:#ff6600; position: absolute; bottom:20px; right:20px;}
+
+#special .bottom .wrap .arrow{text-align: center; padding-bottom: 60px;}
+
+#special .bottom .wrap .arrow a{display: inline-block;}
+#special .bottom .wrap .arrow a img{display: block;} */
+
+
+
+/* 실습5 */
+#dishes{background-image: url(../img/3.png); background-size: cover; background-position: 50% 50%; background-attachment: fixed;}
+
+#dishes .wrap{width: 1160px; padding: 20px 10px 0; margin: 0 auto;}
+
+#dishes .wrap .title{text-align: center;}
+#dishes .wrap .title h2{font-size: 54px; line-height: 72px; padding: 20px 0; color:#555; text-transform: capitalize;}
+#dishes .wrap .title p{font-size: 16px; color:#555; padding-bottom: 40px; text-transform: uppercase;}
+
+#dishes .wrap .cont{padding-bottom: 20px;}
+#dishes .wrap .cont .ca_title{padding: 40px 0 20px; text-align: center;}
+#dishes .wrap .cont .ca_title h3{font-size: 24px; color:#999; }
+
+#dishes .wrap .cont .detail{font-size: 0; position: relative;}
+#dishes .wrap .cont .detail:before{content:""; width: 1px; height: 100%; background-color: #cfcfcf; position: absolute;top:0; left:50%; transform:translateX(-50%);}
+
+#dishes .wrap .cont .detail > div{display: inline-block; width: 50%; padding: 0 15px; /*background: #aaffff;*/ font-size: 16px; vertical-align: top;}
+
+#dishes .wrap .cont .detail > div .menu_bx{padding-bottom: 40px;}
+
+#dishes .wrap .cont .detail > div .menu_bx h4{font-size: 20px; color:#555;}
+
+#dishes .wrap .cont .detail > div .menu_bx p{font-size: 16px; color:#555;}
+
+#dishes .wrap .cont .detail > div .menu_bx h5{font-size: 20px; color:#ff6600; text-align: right;}
+
+#dishes .wrap .arrow{text-align: center; padding-bottom: 60px;}
+#dishes .wrap .arrow a{display: inline-block;}
+#dishes .wrap .arrow a img{display: block;}
+
+
+/* 실습6 */
+
+/*
+[★콘텐츠를 중앙 배치하는 방법★]
+1. 블록인 요소(w값이 100%가 아닌 실제 고정값이 적용된 경우)를 중앙 배치: 본인에게 marin: 0 auto;를 선언한다.
+2. 인라인(w값 선언 불가능) 또는 인라인 블록(w값 선언 가능) 요소를 중앙 배치: 본인은 감싸고 있는 부모 또는 조상(블록인 요소인 경우)에게 text-align: center;를 선언한다.
+*/
+
+#provide{background-color: #ededed;}
+#provide .wrap{width: 1160px; margin: 0 auto;}
+
+#provide .wrap .title{text-align: center;padding: 60px 0 80px;}
+#provide .wrap .title h2{font-size: 54px; line-height: 72px; color: #555; padding-bottom: 20px;}
+#provide .wrap .title p{font-size: 16px; color: #555;}
+
+
+#provide .wrap .content{text-align: center; font-size: 0;}
+#provide .wrap .content .con_box{display: inline-block; width: 360px; height: 360px; background-color: #ffeeee; margin: 0 10px; border-radius: 8px; padding: 40px; vertical-align: top; transition: tranform 0.5s, box-shadow 0.5s;}
+
+#provide .wrap .content .con_box:hover {transform: scale(1.2); box-shadow: 0 0 8px #ff9999;}
+/*
+[transition의 선언 위치]
+1. 원본에서 적용될 경우, 마우스 오버시 진입과 진출에 대한 시간차를 동시 적용 가능.
+2. 마우스 오버시 적용될 경우, 마우스 오버시 진입간의 시간차만을 적용. (레이어 팝업창에 적용 -> 잔상을 제거하기 위함)
+*/
+
+
+#provide .wrap .content .con_box .img{padding-top: 40px;}
+#provide .wrap .content .con_box .img img{display: block; padding: 0 99px;}
+
+#provide .wrap .content .con_box .text{}
+#provide .wrap .content .con_box .text h2{font-size: 24px; font-weight: bold; color: #555; padding: 20px 0; text-transform: uppercase;}
+#provide .wrap .content .con_box .text p{font-size: 16px; color: #555;}
+
+
+#provide .wrap .seperator{text-align: center;}
+#provide .wrap .seperator a{display: inline-block;}
+#provide .wrap .seperator img{display: block; padding: 20px 0 60px;}
+
+
+/* 실습7 */
+#offer{width: 100%; height: 460px; background-image: url(../img/6.jpg); background-size: cover; background-position: 50% 50%; background-attachment: fixed; text-align: center;}
+#offer .dark{width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.5)}
+#offer .dark .wrap{width: 1160px; height: 100%; padding: 0 10px; margin: 0 auto; display: table;}
+#offer .dark .wrap .table_center{display: table-cell; vertical-align: middle;}
+#offer .dark .wrap .table_center .title{}
+#offer .dark .wrap .table_center .title h2{font-size: 54px; line-height: 72px; color: #fff; padding: 20px 0;}
+#offer .dark .wrap .table_center .title p{font-size: 16px; color: #fff; padding-bottom: 40px;}
+
+#offer .dark .wrap .table_center .cont{}
+#offer .dark .wrap .table_center .cont .mail_box{width: 740px; height: 60px; border: 1px solid #ff6600; background-color: #fff; border-radius: 8px; margin: 0 auto; padding: 0 20px; font-size: 0;}
+#offer .dark .wrap .table_center .cont .mail_box input{width: calc(100% - 50px); height: 100%; border: none; font-size: 20px; vertical-align: top; outline: none;}
+#offer .dark .wrap .table_center .cont .mail_box button{width: 50px; height: 100%; border: none; background: transparent; color: #ff6600; font-size: 24px; outline: none; cursor: pointer; vertical-align: top;}
+
+
+
+
+/* 실습8 - 내꺼 */
+/* #register{width: 100%; height: 400px; background-color: #ededed;}
+#register .wrap{width: 1160px; padding: 0 10px; margin: 0 auto; font-size: 0;}
+#register .wrap .left{width: 50%; padding: 20px; float: left;}
+#register .wrap .left .js_map{width: 100%; height: 360px;}
+
+#register .wrap .right{width: 50%; padding: 20px; float: right; font-size: 14px;}
+#register .wrap .right .con_box{}
+#register .wrap .right .con_box .title{text-align: center;}
+#register .wrap .right .con_box .title h2{font-size: 54px; line-height: 72px; padding: 20px 0; color: #555; text-transform: capitalize;}
+
+
+#register .wrap .right .con_box .input{}
+#register .wrap .right .con_box .input input{border: none; outline: none; width: 100%; height: 35px; border-bottom: 1px solid #999; padding: 10px 20px; margin-bottom: 8px; background-color: transparent;}
+
+#register .wrap .right .con_box .input input:nth-child(){}
+#register .wrap .right .con_box .input input:last-child{width: auto; height: 12px;}
+
+
+#register .wrap .right .con_box .button button{float: right; width: 240px; height: 41px; font-size: 18px; color: #fff; background-color: #ff6600; border-radius: 8px; outline: none; border: none; cursor: pointer;} */
+
+
+/* 실습8 - 쌤꺼 */
+#register{width: 100%; height: auto; background-color: #ededed;}
+#register .wrap{width: 1160px; height: auto; padding: 0 10px; margin: 0 auto; font-size: 0;}
+#register .wrap .left, #register .wrap .right{width: 50%; height: 400px; vertical-align: top; display: inline-block; padding: 20px;}
+
+#register .wrap .left #map{height: 100%;}
+
+
+#register .wrap .right{font-size: 16px;}
+#register .wrap .right .title{padding: 20px 0; text-align: center;}
+#register .wrap .right .title h2{font-size: 54px; line-height: 72px; color: #555;}
+
+#register .wrap .right .cont{}
+#register .wrap .right .cont .input_line{padding-bottom: 8px;}
+#register .wrap .right .cont .input_line input{width: 100%; height: 35px; padding: 0 20px; background: transparent; border: none; outline: none; border-bottom: 1px solid #999;}
+
+#register .wrap .right .cont .btn{text-align: right;}
+#register .wrap .right .cont .btn input{width: 240px; height: 41px; font-size: 18px; color: #fff; background-color: #ff6600; border: none; outline: none; border-radius: 8px; cursor: pointer;}
+
+
+/* 실습9 - 내꺼 */
+/* #footer{width: 100%; height: auto; text-align: center; background-color: #000;}
+
+#footer .contents{}
+#footer .contents .wrap{width: 1160px; height: 220px; padding: 0 10px; margin: 0 auto;}
+#footer .contents .wrap .sns_link{display: inline-block; font-size: 0; padding: 20px 0;}
+#footer .contents .wrap .sns_link .circle{width: 40px; height: 40px; margin: 0 10px; border-radius: 50%; border: 1px solid #fff; float: left; transition: border 0.5s;}
+#footer .contents .wrap .sns_link .circle a{display: block; font-size: 16px; padding: 10px 0; color: #fff; transition: color 0.5s;}
+
+#footer .contents .wrap .sns_link .circle:hover{border: 1px solid #ff6600;}
+#footer .contents .wrap .sns_link .circle:hover a{color: #ff6600;}
+
+
+#footer .contents .wrap .logo_copyrights{}
+#footer .contents .wrap .logo_copyrights a{display: inline-block;}
+#footer .contents .wrap .logo_copyrights a img{display: block; padding: 10px 0;}
+#footer .contents .wrap .logo_copyrights p{font-size: 14px; color: #fff; padding: 14px 0;} */
+
+
+/* 9 - 쌤꺼 */
+#footer{width: 100%; height: auto; background-color: #000; text-align: center;}
+#footer .wrap{width: 1160px; height: auto; padding: 20px 10px; margin: 0 auto;}
+#footer .wrap .sns{}
+#footer .wrap .sns ul{}
+#footer .wrap .sns ul li{display: inline-block; margin: 10px;}
+#footer .wrap .sns ul li a{display: block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid #fff; line-height: 38px; color: #fff;}
+
+#footer .wrap .sns ul li:hover a{color: #f60;}
+
+
+#footer .wrap .f_logo{padding: 10px 0; font-size: 0;}
+#footer .wrap .f_logo img{}
+
+#footer .wrap .copyrights{font-size: 14px; padding: 14px 0; color: #fff;}
+
+
+/* top버튼 */
+.top_btn{position: fixed; right: 30px; bottom: 30px; cursor: pointer; z-index: 1;}
+.top_btn a{color: #f60; font-size: 50px;}
